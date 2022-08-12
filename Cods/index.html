@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <h1>asdfasdfasdfasdf</h1>
+    </head>
+    
+<script>
+
+const cpf = '705.484.450-52';
+const cpfFormatado = cpf.replaceAll(/\D+/g,'');
+let tamanhoCpf = cpfFormatado.length -1;
+let cpfMultiplicado = [];
+
+for(let valor of cpfFormatado){
+    let temp = Number(valor) * tamanhoCpf;
+    cpfMultiplicado.push(temp)
+    // tamanhoCpf--;
+    
+    // console.log(valor * tamanhoCpf)
+    
+    tamanhoCpf--;
+};
+
+cpfMultiplicado.pop();
+cpfMultiplicado.pop();
+const total = cpfMultiplicado.reduce((red,acc)=>red+acc)
+console.log(total)
+
+console.log(11 - total%11);
+
+
+    </script>
+</body>
+</html>
